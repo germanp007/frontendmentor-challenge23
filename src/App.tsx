@@ -3,7 +3,7 @@ import ControlSwitch from "./components/ControlSwitch";
 import "./index.css";
 const App = () => {
   return (
-    <main className="w-screen h-screen">
+    <main className="w-screen min-h-screen">
       <header className="text-left h-[245px] w-full bg-VeryPaleBlue font-semibold px-5  pt-9">
         <h1 className=" text-VeryDarkBlue text-[1.4rem] tracking-[.04rem]">
           Social Media Dashboard
@@ -17,6 +17,9 @@ const App = () => {
           <ControlSwitch />
         </div>
       </header>
+      <section className="px-5">
+        <div className="bg-LightGrayishBlue w-full h-[212px] border-t-4 border-Facebook rounded-[0.3rem] mt-[-20px]"></div>
+      </section>
     </main>
   );
 };
