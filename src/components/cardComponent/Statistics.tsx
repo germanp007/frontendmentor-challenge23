@@ -24,9 +24,14 @@ const Statistics: FC<Props> = ({
   percentInteraction,
   description,
 }) => {
+  const isInstagramOrYoutube = id === "instagram" || id === "youtube";
   return (
-    <>
-      <article className="w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem]">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <article
+        className={`w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
+          isInstagramOrYoutube ? "order-2" : "order-1"
+        }`}
+      >
         <div className="flex justify-between">
           <h2 className="text-xs font-bold text-DarkGrayishBlue">
             {description}
@@ -60,7 +65,11 @@ const Statistics: FC<Props> = ({
           </div>
         </div>
       </article>
-      <article className="w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem]">
+      <article
+        className={`w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
+          isInstagramOrYoutube ? "order-1" : "order-2"
+        }`}
+      >
         <div className="flex justify-between">
           <h2 className="text-xs font-bold text-DarkGrayishBlue">Likes</h2>
           {id === "facebook" ? (
@@ -90,7 +99,7 @@ const Statistics: FC<Props> = ({
           </div>
         </div>
       </article>
-    </>
+    </div>
   );
 };
 

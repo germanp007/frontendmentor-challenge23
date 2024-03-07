@@ -6,7 +6,7 @@ import { dataSocialMedia, statistics } from "./data/data.ts";
 import "./index.css";
 const App = () => {
   return (
-    <main className="w-screen min-h-screen pb-6">
+    <main className="w-screen min-h-screen pb-14">
       <header className="text-left h-[245px] w-full bg-VeryPaleBlue font-semibold px-5  pt-9">
         <h1 className=" text-VeryDarkBlue text-[1.4rem] tracking-[.04rem]">
           Social Media Dashboard
