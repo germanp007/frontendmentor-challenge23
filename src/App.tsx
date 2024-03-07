@@ -19,7 +19,7 @@ const App = () => {
           <ControlSwitch />
         </div>
       </header>
-      <section className="px-5 grid gap-10">
+      <section className="px-5 grid gap-10 mb-14">
         {dataSocialMedia.map((ele) => (
           <Card
             key={ele.id}
@@ -29,6 +29,12 @@ const App = () => {
             today={ele.today}
           />
         ))}
+      </section>
+      <section className="px-5">
+        <h2 className="text-[1.5rem] font-bold text text-DarkGrayishBlue mb-5">
+          Overview - Today
+        </h2>
+        <article className="w-full h-[125px] bg-LightGrayishBlue "></article>
       </section>
     </main>
   );

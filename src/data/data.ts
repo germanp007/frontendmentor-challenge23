@@ -24,3 +24,5 @@ export const dataSocialMedia = [
     today: -144,
   },
 ];
+
+export const stadistic = [];

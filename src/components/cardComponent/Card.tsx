@@ -47,7 +47,7 @@ const Card: FC<Props> = ({ id, account, followers, today }) => {
           {followers > 9999 ? `${followers / 1000}k` : followers}
         </h2>
         <p className="text-xs font-extralight tracking-[.354rem] text-DarkGrayishBlue">
-          FOLLOWERS
+          {id === "youtube" ? "SUBSCRIBERS" : "FOLLOWERS"}
         </p>
       </div>
       <div className="flex items-center">
@@ -55,9 +55,9 @@ const Card: FC<Props> = ({ id, account, followers, today }) => {
         <span
           className={`text-xs font-medium ${
             today > 0 ? "text-LimeGreen" : "text-BrightRed"
-          } ml-[5.6px]`}
+          } ml-[5.6px] tracking-[0.045rem]`}
         >
-          {today} Today
+          {Math.abs(today)} Today
         </span>
       </div>
     </article>
