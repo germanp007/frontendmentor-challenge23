@@ -7,9 +7,9 @@ export default {
         // PRIMARY
         LimeGreen: "hsl(163, 72%, 41%)",
         BrightRed: "hsl(356, 69%, 56%)",
-        Facebook: "hsl(208, 92%, 53%)",
-        Twitter: "hsl(203, 89%, 53%)",
-        YouTube: "hsl(348, 97%, 39%)",
+        facebook: "hsl(208, 92%, 53%)",
+        twitter: "hsl(203, 89%, 53%)",
+        youTube: "hsl(348, 97%, 39%)",
 
         // Dark Theme
 

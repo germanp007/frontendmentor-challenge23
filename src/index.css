@@ -9,11 +9,11 @@
 }
 
 .instagram {
-  background: linear-gradient(
-    45deg,
-    hsl(37deg 97% 70%) 0%,
-    hsl(329deg 70% 58%) 100%
-  );
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 1;
+  border-image-slice: 1;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
 }
 
 .toggleDark {
