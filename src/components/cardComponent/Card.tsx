@@ -18,7 +18,7 @@ type Props = {
 const Card: FC<Props> = ({ id, account, followers, today }) => {
   return (
     <article
-      className={`bg-LightGrayishBlue w-full h-[212px] rounded-[0.3rem] mt-[-20px] flex flex-col items-center justify-evenly  pb-3 ${
+      className={`bg-LightGrayishBlue w-full h-[212px] rounded-[0.3rem] mt-[-20px] flex flex-col items-center justify-evenly cursor-pointer  pb-3 ${
         id === "instagram"
           ? "instagram border-t-4"
           : id === "facebook"

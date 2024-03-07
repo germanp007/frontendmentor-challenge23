@@ -1,7 +1,8 @@
-//import CustomizedSwitches from "./components/CustomizedSwitches";
 import Card from "./components/cardComponent/Card.tsx";
+import Statistics from "./components/cardComponent/Statistics.tsx";
+
 import ControlSwitch from "./components/switch/ControlSwitch.tsx";
-import { dataSocialMedia } from "./data/data.ts";
+import { dataSocialMedia, statistics } from "./data/data.ts";
 import "./index.css";
 const App = () => {
   return (
@@ -30,11 +31,20 @@ const App = () => {
           />
         ))}
       </section>
-      <section className="px-5">
+      <section className="px-5 gap-6 grid">
         <h2 className="text-[1.5rem] font-bold text text-DarkGrayishBlue mb-5">
           Overview - Today
         </h2>
-        <article className="w-full h-[125px] bg-LightGrayishBlue "></article>
+        {statistics.map((ele) => (
+          <Statistics
+            id={ele.id}
+            likes={ele.likes}
+            percentLikes={ele.percentLikes}
+            interaction={ele.interaction}
+            percentInteraction={ele.percentInteraction}
+            description={ele.description}
+          />
+        ))}
       </section>
     </main>
   );
