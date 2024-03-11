@@ -39,7 +39,7 @@ const App = () => {
         </h2>
       </div>
 
-      <section className="pl-4 gap-6 grid md:grid-cols-2 max-w-[1110px] m-auto ">
+      <section className="pl-4 pr-4 lg:pr-0 gap-6 grid md:grid-cols-2  max-w-[1110px] m-auto ">
         {statistics.map((ele) => (
           <Statistics
             id={ele.id}
