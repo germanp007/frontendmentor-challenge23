@@ -26,7 +26,7 @@ const Statistics: FC<Props> = ({
 }) => {
   const isInstagramOrYoutube = id === "instagram" || id === "youtube";
   return (
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       <article
         className={`w-full h-[125px] md:w-[255px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
           isInstagramOrYoutube ? "order-2" : "order-1"

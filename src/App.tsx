@@ -6,8 +6,8 @@ import { dataSocialMedia, statistics } from "./data/data.ts";
 import "./index.css";
 const App = () => {
   return (
-    <main className="w-screen min-h-screen pb-14">
-      <header className="text-left h-[245px] w-screen bg-VeryPaleBlue font-semibold pt-9 sm:flex sm:justify-between sm:items-start px-5">
+    <main className="w-screen min-h-screen pb-14 overflow-hidden ">
+      <header className="text-left h-[245px] w-screen bg-VeryPaleBlue font-semibold pt-9 sm:flex sm:justify-between sm:items-start px-5 md:px-32">
         <div>
           <h1 className=" text-VeryDarkBlue text-[1.4rem] tracking-[.04rem] sm:text-[1.7rem]">
             Social Media Dashboard
@@ -22,7 +22,7 @@ const App = () => {
           <ControlSwitch />
         </div>
       </header>
-      <section className="px-5 grid gap-10 mb-14 sm:grid-cols-2 lg:grid-cols-4 md:w-[1110px] m-auto md:px-0 bg-white">
+      <section className="px-5 grid gap-12 sm:grid-cols-2 lg:grid-cols-4 md:max-w-[1110px] m-auto bg-white ">
         {dataSocialMedia.map((ele) => (
           <Card
             key={ele.id}
@@ -39,7 +39,7 @@ const App = () => {
         </h2>
       </div>
 
-      <section className="px-5 gap-8 grid md:grid-cols-2 md:w-[1110px] m-auto md:px-0">
+      <section className="pl-4 gap-6 grid md:grid-cols-2 max-w-[1110px] m-auto ">
         {statistics.map((ele) => (
           <Statistics
             id={ele.id}
