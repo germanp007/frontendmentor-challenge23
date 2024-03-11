@@ -26,9 +26,9 @@ const Statistics: FC<Props> = ({
 }) => {
   const isInstagramOrYoutube = id === "instagram" || id === "youtube";
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
       <article
-        className={`w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
+        className={`w-full h-[125px] md:w-[255px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
           isInstagramOrYoutube ? "order-2" : "order-1"
         }`}
       >
@@ -48,7 +48,7 @@ const Statistics: FC<Props> = ({
         </div>
         <div className="flex justify-between h-[39px]">
           <h2 className="text-[2rem] text-VeryDarkBlue font-bold">
-            {interaction}
+            {interaction > 9999 ? `${interaction / 1000}k` : interaction}
           </h2>
           <div className="flex justify-center items-end">
             <div className="flex justify-center items-center">
@@ -66,7 +66,7 @@ const Statistics: FC<Props> = ({
         </div>
       </article>
       <article
-        className={`w-full h-[125px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
+        className={`w-full h-[125px] md:w-[255px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
           isInstagramOrYoutube ? "order-1" : "order-2"
         }`}
       >
