@@ -17,7 +17,7 @@ const App = () => {
           </p>
         </div>
         <hr className="border-1 border-DarkGrayishBlue mb-5 sm:hidden" />
-        <div className="flex justify-between items-start gap-4 h-full sm:items-start sm:mt-3">
+        <div className="flex justify-between gap-4 h-full sm:mt-5">
           <p className="text-[.85rem] text-DesaturatedBlue">Dark Mode</p>
           <ControlSwitch />
         </div>
