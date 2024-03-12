@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ControlSwitch() {
   const [checked, setChecked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  //const [theme, setTheme] = useState("light");
+
   const handleChange = () => {
     setChecked(!checked);
   };
+  // const handleTheme = () => {
+  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  // };
+
+  useEffect(() => {
+    if (!checked) {
+      document.querySelector("html")?.classList.add("dark");
+    } else {
+      document.querySelector("html")?.classList.remove("dark");
+    }
+  }, [checked]);
+
   return (
     <div
       className={`w-[48px] h-[24px] bg-slate-400 rounded-full flex items-center px-1 ${

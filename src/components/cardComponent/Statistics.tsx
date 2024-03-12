@@ -30,7 +30,7 @@ const Statistics: FC<Props> = ({
       <article
         className={`w-full h-[125px] lg:w-[255px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
           isInstagramOrYoutube ? "order-2" : "order-1"
-        }`}
+        } hover:bg-slate-200 transition-all duration-500 cursor-pointer dark:bg-DarkDesaturatedBlue`}
       >
         <div className="flex justify-between">
           <h2 className="text-xs font-bold text-DarkGrayishBlue">
@@ -47,7 +47,7 @@ const Statistics: FC<Props> = ({
           )}
         </div>
         <div className="flex justify-between h-[39px]">
-          <h2 className="text-[2rem] text-VeryDarkBlue font-bold">
+          <h2 className="text-[2rem] text-VeryDarkBlue font-bold dark:text-White">
             {interaction > 9999 ? `${interaction / 1000}k` : interaction}
           </h2>
           <div className="flex justify-center items-end">
@@ -68,7 +68,7 @@ const Statistics: FC<Props> = ({
       <article
         className={`w-full h-[125px] lg:w-[255px] bg-LightGrayishBlue px-8 py-5 flex flex-col justify-between rounded-[0.3rem] ${
           isInstagramOrYoutube ? "order-1" : "order-2"
-        }`}
+        } hover:bg-slate-200 transition-all duration-500 cursor-pointer dark:bg-DarkDesaturatedBlue`}
       >
         <div className="flex justify-between">
           <h2 className="text-xs font-bold text-DarkGrayishBlue">Likes</h2>
@@ -83,7 +83,9 @@ const Statistics: FC<Props> = ({
           )}
         </div>
         <div className="flex justify-between h-[39px]">
-          <h2 className="text-[2rem] text-VeryDarkBlue font-bold">{likes}</h2>
+          <h2 className="text-[2rem] text-VeryDarkBlue font-bold dark:text-White">
+            {likes}
+          </h2>
           <div className="flex justify-center items-end">
             <div className="flex justify-center items-center">
               {percentLikes > 0 ? <IconUp /> : <IconDown />}
