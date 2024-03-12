@@ -8,11 +8,15 @@ export default function ControlSwitch() {
   const handleChange = () => {
     setChecked(!checked);
   };
-  // const handleTheme = () => {
-  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  // };
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setChecked(savedTheme === "dark");
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("theme", checked ? "dark" : "light");
     if (!checked) {
       document.querySelector("html")?.classList.add("dark");
     } else {
