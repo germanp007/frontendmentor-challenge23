@@ -36,7 +36,7 @@ const App = () => {
         </div>
       </section>
       <div className="flex justify-start max-w-[1110px] m-auto dark:bg-VeryDarkBlueBG">
-        <h2 className="text-[1.5rem] font-bold text text-DarkGrayishBlue mb-5 dark:text-White">
+        <h2 className="p-4 text-[1.5rem] font-bold text text-DarkGrayishBlue mb-5 dark:text-White">
           Overview - Today
         </h2>
       </div>

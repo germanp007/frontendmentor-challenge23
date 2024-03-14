@@ -7,6 +7,7 @@ import {
   Twitter,
   Youtube,
 } from "../iconComponents.tsx";
+import CountUp from "react-countup";
 
 type Props = {
   id: string;
@@ -18,7 +19,7 @@ type Props = {
 const Card: FC<Props> = ({ id, account, followers, today }) => {
   return (
     <article
-      className={`bg-LightGrayishBlue w-full  sm:mt-[-90px] sm:mb-[90px] lg:w-[255px] h-[212px] rounded-[0.3rem] mt-[-20px] flex flex-col items-center justify-evenly cursor-pointer  pb-3 hover:bg-slate-200 transition-all duration-500 ${
+      className={`bg-LightGrayishBlue w-full  sm:mt-[-90px] sm:mb-[90px] lg:w-[255px] h-[212px] rounded-[0.3rem] mt-[-20px] flex flex-col items-center justify-evenly cursor-pointer pb-3 hover:bg-slate-200 transition-all duration-500 ${
         id === "instagram"
           ? "instagram border-t-4"
           : id === "facebook"
@@ -44,7 +45,11 @@ const Card: FC<Props> = ({ id, account, followers, today }) => {
       </div>
       <div className="flex flex-col items-center justify-center mb-4 ">
         <h2 className="h-[70px] text-[3.45rem] font-bold text-VeryDarkBlue dark:text-White">
-          {followers > 9999 ? `${followers / 1000}k` : followers}
+          {followers > 9999 ? (
+            <CountUp end={followers / 1000} suffix="k" />
+          ) : (
+            <CountUp end={followers} />
+          )}
         </h2>
         <p className="text-xs font-extralight tracking-[.354rem] text-DarkGrayishBlue">
           {id === "youtube" ? "SUBSCRIBERS" : "FOLLOWERS"}
