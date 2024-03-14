@@ -8,6 +8,7 @@ import {
   Youtube,
 } from "../iconComponents.tsx";
 
+import CountUp from "react-countup";
 type Props = {
   id: string;
   likes: number;
@@ -48,7 +49,11 @@ const Statistics: FC<Props> = ({
         </div>
         <div className="flex justify-between h-[39px]">
           <h2 className="text-[2rem] text-VeryDarkBlue font-bold dark:text-White">
-            {interaction > 9999 ? `${interaction / 1000}k` : interaction}
+            {interaction > 9999 ? (
+              <CountUp end={interaction / 1000} suffix="k" />
+            ) : (
+              <CountUp end={interaction} />
+            )}
           </h2>
           <div className="flex justify-center items-end">
             <div className="flex justify-center items-center">
@@ -84,7 +89,7 @@ const Statistics: FC<Props> = ({
         </div>
         <div className="flex justify-between h-[39px]">
           <h2 className="text-[2rem] text-VeryDarkBlue font-bold dark:text-White">
-            {likes}
+            <CountUp end={likes} />
           </h2>
           <div className="flex justify-center items-end">
             <div className="flex justify-center items-center">
